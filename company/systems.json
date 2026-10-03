@@ -1,0 +1,19 @@
+{
+  "company": "Kaira Naturals Pvt Ltd",
+  "systems": [
+    {
+      "id": "mail",
+      "name": "Kaira Mail",
+      "baseUrl": "http://localhost:4102",
+      "purpose": "Shared accounts inbox (accounts@kairanaturals.example). Supplier invoices, quotes and customer requests arrive here. Replies and drafts are written here.",
+      "login": { "path": "/login", "usernameField": "email", "passwordField": "password" }
+    },
+    {
+      "id": "books",
+      "name": "Kaira Books",
+      "baseUrl": "http://localhost:4101",
+      "purpose": "Accounts system of record: bills, suppliers (payment terms, bank details), customers (addresses, notes) and purchase orders.",
+      "login": { "path": "/login", "usernameField": "email", "passwordField": "password" }
+    }
+  ]
+}

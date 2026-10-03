@@ -1,0 +1,47 @@
+{
+  "_comment": "Enforced by the operator's code on every request the browser sends. Rules are checked in order; the first match wins.",
+  "rules": [
+    {
+      "id": "no-deletes",
+      "description": "The operator never deletes records.",
+      "match": { "method": "POST", "path": "/delete$" },
+      "effect": "deny"
+    },
+    {
+      "id": "no-bank-changes",
+      "description": "Bank details can never be changed by the operator. Bank changes need phone verification by the owner.",
+      "match": { "system": "books", "method": "POST", "path": "^/suppliers/[^/]+/bank$" },
+      "effect": "deny"
+    },
+    {
+      "id": "bills-over-50k",
+      "description": "Bills above ₹50,000 need the owner's approval before they are saved.",
+      "approver": "Nisha Kapoor (owner)",
+      "match": { "system": "books", "method": "POST", "path": "^/bills$" },
+      "when": { "field": "amount", "op": "gt", "value": 50000 },
+      "effect": "require_approval",
+      "show": ["supplier_id", "invoice_no", "invoice_date", "due_date", "amount", "category", "notes"],
+      "bind": ["supplier_id", "invoice_no", "invoice_date", "due_date", "amount", "category"]
+    },
+    {
+      "id": "pos-over-50k",
+      "description": "Purchase orders above ₹50,000 (before GST) need the owner's approval before they are created.",
+      "approver": "Nisha Kapoor (owner)",
+      "match": { "system": "books", "method": "POST", "path": "^/purchase-orders$" },
+      "when": { "product": ["quantity", "unit_price"], "op": "gt", "value": 50000 },
+      "effect": "require_approval",
+      "show": ["supplier_id", "item", "quantity", "unit_price", "advance_pct", "delivery_days", "valid_until", "notes"],
+      "bind": ["supplier_id", "item", "quantity", "unit_price"]
+    },
+    {
+      "id": "external-email",
+      "description": "Emails to anyone outside kairanaturals.example need the owner's approval before they are sent. Drafts are fine.",
+      "approver": "Nisha Kapoor (owner)",
+      "match": { "system": "mail", "method": "POST", "path": "^/send$" },
+      "when": { "field": "to", "op": "not_all_end_with", "value": "@kairanaturals.example" },
+      "effect": "require_approval",
+      "show": ["to", "subject", "body"],
+      "bind": ["to", "subject", "body"]
+    }
+  ]
+}

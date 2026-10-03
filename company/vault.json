@@ -1,0 +1,5 @@
+{
+  "_comment": "Sandbox-only credentials for the pretend company. In production these come from a secrets manager. The AI never sees them.",
+  "mail": { "username": "accounts@kairanaturals.example", "password": "kaira-mail-2026" },
+  "books": { "username": "ops.agent@kairanaturals.example", "password": "kaira-books-2026" }
+}
