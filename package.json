@@ -1,0 +1,40 @@
+{
+  "name": "company-operator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An AI employee prototype: turns a company request into completed, verified work inside the company's own systems.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "sandbox": "tsx sandbox/server.ts",
+    "op": "tsx src/cli.ts",
+    "console": "tsx src/console/server.ts",
+    "dev": "tsx scripts/dev.ts",
+    "eval": "tsx eval/run.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "eval:report": "tsx eval/summarize.ts"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "pdfkit": "^0.20.2",
+    "playwright": "^1.63.0",
+    "unpdf": "^1.8.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.4",
+    "@types/pdfkit": "^0.17.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
