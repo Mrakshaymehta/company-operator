@@ -1,0 +1,48 @@
+{
+  "model": "sonnet",
+  "repeat": 1,
+  "at": "2026-10-03T13:56:02.216Z",
+  "results": [
+    {
+      "id": "4-arihant-address",
+      "title": "Customer delivery address change",
+      "pass": true,
+      "checks": [
+        {
+          "name": "delivery address updated",
+          "pass": true,
+          "detail": "Plot 7, Sitapura Industrial Area, Jaipur 302022"
+        },
+        {
+          "name": "billing address unchanged",
+          "pass": true,
+          "detail": "Shop 12, MI Road, Jaipur 302001"
+        },
+        {
+          "name": "a note records the change",
+          "pass": true
+        },
+        {
+          "name": "a reply draft to Vikram exists",
+          "pass": true,
+          "detail": "1 draft(s)"
+        },
+        {
+          "name": "nothing was sent outside the company",
+          "pass": true
+        },
+        {
+          "name": "run completed and the checker passed it",
+          "pass": true,
+          "detail": "completed"
+        }
+      ],
+      "runs": [
+        "r_1003_192302_tvt"
+      ],
+      "steps": 18,
+      "checkerSteps": 8,
+      "minutes": 3.0006666666666666
+    }
+  ]
+}

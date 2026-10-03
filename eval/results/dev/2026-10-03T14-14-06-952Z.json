@@ -1,0 +1,44 @@
+{
+  "model": "sonnet",
+  "repeat": 1,
+  "at": "2026-10-03T14:14:06.953Z",
+  "results": [
+    {
+      "id": "6-vague-request",
+      "title": "Vague request: which supplier?",
+      "pass": true,
+      "checks": [
+        {
+          "name": "asked a question before changing anything",
+          "pass": true
+        },
+        {
+          "name": "exactly one bill for S-1001 RPI/26-27/0468",
+          "pass": true,
+          "detail": "found 1"
+        },
+        {
+          "name": "amount matches the invoice",
+          "pass": true,
+          "detail": "46020"
+        },
+        {
+          "name": "invoice date and due date are right",
+          "pass": true,
+          "detail": "2026-09-30 / 2026-11-14"
+        },
+        {
+          "name": "run completed and the checker passed it",
+          "pass": true,
+          "detail": "completed"
+        }
+      ],
+      "runs": [
+        "r_1003_194151_grq"
+      ],
+      "steps": 11,
+      "checkerSteps": 7,
+      "minutes": 2.264466666666667
+    }
+  ]
+}

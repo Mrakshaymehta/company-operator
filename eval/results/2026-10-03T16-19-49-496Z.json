@@ -1,0 +1,45 @@
+{
+  "model": "sonnet",
+  "repeat": 1,
+  "at": "2026-10-03T16:19:49.496Z",
+  "results": [
+    {
+      "id": "11-redesigned-screen",
+      "title": "Rajesh invoice after Kaira Books is redesigned",
+      "pass": true,
+      "checks": [
+        {
+          "name": "exactly one bill for S-1001 RPI/26-27/0468",
+          "pass": true,
+          "detail": "found 1"
+        },
+        {
+          "name": "amount matches the invoice",
+          "pass": true,
+          "detail": "46020"
+        },
+        {
+          "name": "invoice date and due date are right",
+          "pass": true,
+          "detail": "2026-09-30 / 2026-11-14"
+        },
+        {
+          "name": "category is right",
+          "pass": true,
+          "detail": "Packaging"
+        },
+        {
+          "name": "run completed and the checker passed it",
+          "pass": true,
+          "detail": "completed"
+        }
+      ],
+      "runs": [
+        "r_1003_214753_5kw"
+      ],
+      "steps": 10,
+      "checkerSteps": 7,
+      "minutes": 1.9371833333333333
+    }
+  ]
+}

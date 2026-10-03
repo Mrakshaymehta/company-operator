@@ -1,0 +1,80 @@
+{
+  "model": "sonnet",
+  "repeat": 1,
+  "at": "2026-10-03T14:00:41.302Z",
+  "results": [
+    {
+      "id": "5-sunrise-learning",
+      "title": "Ask once, remember forever (two Sunrise Labels invoices)",
+      "pass": true,
+      "checks": [
+        {
+          "name": "exactly one bill for S-1002 SL-2209",
+          "pass": true,
+          "detail": "found 1"
+        },
+        {
+          "name": "amount matches the invoice",
+          "pass": true,
+          "detail": "22420"
+        },
+        {
+          "name": "invoice date and due date are right",
+          "pass": true,
+          "detail": "2026-09-25 / 2026-10-25"
+        },
+        {
+          "name": "category is right",
+          "pass": true,
+          "detail": "Labels and printing"
+        },
+        {
+          "name": "exactly one bill for S-1002 SL-2141",
+          "pass": true,
+          "detail": "found 1"
+        },
+        {
+          "name": "amount matches the invoice",
+          "pass": true,
+          "detail": "18880"
+        },
+        {
+          "name": "invoice date and due date are right",
+          "pass": true,
+          "detail": "2026-09-04 / 2026-10-04"
+        },
+        {
+          "name": "category is right",
+          "pass": true,
+          "detail": "Labels and printing"
+        },
+        {
+          "name": "first run asked about the category",
+          "pass": true
+        },
+        {
+          "name": "answer saved to company memory with its source",
+          "pass": true,
+          "detail": "Expense category for bills: Labels and printing."
+        },
+        {
+          "name": "second run did not ask again",
+          "pass": true,
+          "detail": "0 question(s)"
+        },
+        {
+          "name": "run completed and the checker passed it",
+          "pass": true,
+          "detail": "completed, completed"
+        }
+      ],
+      "runs": [
+        "r_1003_192612_r17",
+        "r_1003_192833_slb"
+      ],
+      "steps": 24,
+      "checkerSteps": 16,
+      "minutes": 4.473433333333333
+    }
+  ]
+}

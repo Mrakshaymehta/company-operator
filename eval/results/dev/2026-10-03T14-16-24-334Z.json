@@ -1,0 +1,44 @@
+{
+  "model": "sonnet",
+  "repeat": 1,
+  "at": "2026-10-03T14:16:24.334Z",
+  "results": [
+    {
+      "id": "9-crash-resume",
+      "title": "Operator crashes mid-task and resumes",
+      "pass": true,
+      "checks": [
+        {
+          "name": "exactly one bill for S-1001 RPI/26-27/0468",
+          "pass": true,
+          "detail": "found 1"
+        },
+        {
+          "name": "amount matches the invoice",
+          "pass": true,
+          "detail": "46020"
+        },
+        {
+          "name": "invoice date and due date are right",
+          "pass": true,
+          "detail": "2026-09-30 / 2026-11-14"
+        },
+        {
+          "name": "the run was resumed from its diary",
+          "pass": true
+        },
+        {
+          "name": "run completed and the checker passed it",
+          "pass": true,
+          "detail": "completed"
+        }
+      ],
+      "runs": [
+        "r_1003_194418_r0p"
+      ],
+      "steps": 11,
+      "checkerSteps": 8,
+      "minutes": 2.1032333333333333
+    }
+  ]
+}
