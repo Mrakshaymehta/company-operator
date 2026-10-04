@@ -1,6 +1,6 @@
 node_modules/
-runs/
-data/
+/runs/
+/data/
 .env
 *.log
 .DS_Store
