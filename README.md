@@ -6,6 +6,7 @@
 
 You type *"Find the latest invoice from Rajesh Packaging, extract the amount and due date, enter it into Kaira Books, and tell me once it is done."* The operator works out the unstated steps from company memory and signs in to the company's email and accounts websites through a real browser. It picks the right invoice past decoy emails and reads the PDF. The invoice has no due date, so it computes one from the supplier's payment terms. It checks for duplicates and enters the bill. Then a separate checker with a read-only browser confirms the result in the system of record. Large bills pause for the owner's approval, enforced in code on the outgoing request. Crashes, logouts and server errors are recovered without double entries. Every step is written to an append-only diary. Work can also arrive in the background: a schedule checks the inbox, and new invoices get entered without anyone asking.
 
+> **Live showcase (recorded runs, no setup):** https://company-operator.vercel.app
 > Demo video: **[link to be added]**
 > Built for the CentrAlign AI Founding Engineer assignment ("AI Employee / Autonomous Company Operator").
 
