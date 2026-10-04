@@ -15,7 +15,8 @@
     "eval": "tsx eval/run.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "eval:report": "tsx eval/summarize.ts"
+    "eval:report": "tsx eval/summarize.ts",
+    "showcase": "tsx scripts/build-showcase.ts"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
